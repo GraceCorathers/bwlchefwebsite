@@ -1,0 +1,48 @@
+{% extends 'layout.html' %}
+{% block title %}
+About
+{% endblock %}
+{% block content %}
+<div>
+    <div class="container text-center" background-color="#e2dfdf">
+        <div class="row">
+            <div class="col text-start">
+                <br>
+                <h1 margin-top="50px"><strong><em>Meet Chef Grace</em></strong>👩🏻‍🍳</h1>
+                <p>Hi, my name is Grace and I love to cook! Please enjoy this website that contains recipes, cooking tips and kitchen hacks! Feel free to contact me with questions/ideas using the provided information or fill out the form below!</p>
+                <br>
+                <h5><strong>Phone Number:</strong></h5>
+                <h6>123-456-7890</h6>
+                <h5><strong>Email:</strong></h5>
+                <h6>grace@chefs.org</h6>
+                <br>
+                <h4><strong>Inquiry Form:</strong></h4>
+                <div class="container m-0">
+                    <form action="/submit" method="POST">
+                        <div class="mb-3">
+                            <label id="name" for="exampleFormControlInput1" class="form-label">Full Name</label>
+                            <input class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label id="email" for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label id="questions" for="exampleFormControlTextarea1" class="form-label">Questions or
+                                Recipe Ideas:</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1"  rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col">
+                <img class="img-fluid" src="{{ url_for('static', filename='chefpic.png')}}" width="540px"
+                    height="675px">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

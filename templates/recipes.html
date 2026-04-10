@@ -1,0 +1,306 @@
+{% extends 'layout.html' %}
+{% block title %}
+Recipes
+{% endblock %}
+{% block content %}
+<div class="container" background-color="#e2dfdf">
+    <h1 class="mt-3"><strong>My Favorite Recipes!</strong></h1>
+    <div class="row">
+        <div class="col">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='steak.png')}}" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Sliced Steak</h5>
+                            <p class="card-text">The best steak cooked exactly right and served up with a side of
+                                potatoes</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">
+                                Read more
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal modal-xl fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-7" id="staticBackdropLabel">Sliced Steak</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4>Ingredients:</h4>
+                                            <p>
+                                                <li>2 steaks (your preferred cut)</li>
+                                                <li>Salt and pepper (to taste)</li>
+                                                <li>1 bottle of olive oil or stick of butter</li>
+                                                <li>2 cloves garlic, minced</li>
+                                                <li>8 baby golden potatoes (chopped in half)</li>
+                                                <li>1 teaspoon garlic powder (optional)</li>
+                                                <li>1 teaspoon dried rosemary or thyme (optional)</li>
+                                            </p>
+                                            <h4>Directions:</h4>
+                                            <p><strong>1. Prepare the Potatoes:</strong>
+                                                Preheat your oven to 400°F. Cut the potatoes into wedges or
+                                                cubes.
+                                                Toss in olive oil, salt, pepper, and optional garlic powder
+                                                or dried herbs, then spread them on a baking sheet in a single layer.
+                                                <br>
+                                                <strong>2. Roast the Potatoes:</strong>
+                                                Place the baking sheet in the oven and roast for 25-30 minutes until
+                                                golden and crispy.
+                                                <br>
+                                                <strong>3. Prepare the Steak:</strong>
+                                                Season the steaks with salt and pepper on both sides
+                                                <br>
+                                                <strong>4. Cook the Steak:</strong>
+                                                Heat olive oil or butter in a large skillet over medium-high heat. Once
+                                                hot, add the steaks and cook for about 3-4 minutes per side for
+                                                medium-rare. Add garlic to the pan for extra flavor.
+                                                <br>
+                                                <strong>5. Rest the Steak:</strong>
+                                                Remove the steaks from the skillet and let them rest on a plate for 5
+                                                minutes before cutting.
+                                                <br>
+                                                <strong>6. Serve:</strong>
+                                                Slice and serve the steak alongside the roasted potatoes, and enjoy!
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 card-text"><small class="text-body-secondary">Last updated February
+                                    2025</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='chicken.png')}}" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Teriyaki Chicken</h5>
+                            <p class="card-text">A healthy and protein packed meal of bite sized chicken pieces and rice
+                                served with a delicious teriyaki sauce</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop2">
+                                Read more
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal modal-xl fade" id="staticBackdrop2" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop2Label"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-7" id="staticBackdropLabel">Teriyaki Chicken</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4>Ingredients:</h4>
+                                            <p>
+                                                <li>2 boneless, skinless chicken breasts (cut into bite-sized pieces)
+                                                </li>
+                                                <li>1 bottle of olive oil</li>
+                                                <li>1 bottle of soy sauce</li>
+                                                <li>3 tablespoons minced garlic</li>
+                                                <li>1 bottle of teriyaki sauce</li>
+                                                <li>1 cup jasmine rice</li>
+                                                <li>2 cups water</li>
+                                                <li>Salt and pepper</li>
+                                            </p>
+                                            <h4>Directions:</h4>
+                                            <p><strong>1. Prepare the Rice:</strong>
+                                                Bring a medium pot of water to a boil, then reduce the heat to low and
+                                                cover. Add rice and simmer for 15 minutes until the rice is cooked.
+                                                <br>
+                                                <strong>2.Cook the Chicken Bites:</strong> Heat olive oil and garlic in
+                                                a large skillet or pan over medium-high heat. Add the cubed chicken
+                                                pieces in a single layer and cook for 5-7 minutes, stirring
+                                                occasionally, until golden brown and cooked through.
+                                                <br>
+                                                <strong>3. Add the Teriyaki Sauce:</strong> Once the chicken is almost
+                                                fully cooked, pour the teriyaki sauce all over the chicken. Add a splash
+                                                of soy sauce and salt and pepper to taste. Stir to coat the chicken
+                                                evenly, and cook for an additional 2-3 minutes until the sauce thickens
+                                                and the chicken is well-glazed.
+                                                <br>
+                                                <strong>4. Serve:</strong>
+                                                Fluff the cooked rice with a fork and divide it between plates. Spoon
+                                                the teriyaki chicken bites over the rice and enjoy!
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 card-text"><small class="text-body-secondary">Last updated February
+                                    2025</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='sandwich.png')}}" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Turkey Sandwich</h5>
+                            <p class="card-text">With a twist on the traditional club sandwich, this revamped recipe
+                                will be best turkey sandwich you'll ever have</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop3">
+                                Read more
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal modal-xl fade" id="staticBackdrop3" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop3Label"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-7" id="staticBackdropLabel">Turkey Sandwich</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4>Ingredients:</h4>
+                                            <p>
+                                                <li>1 pack of sliced deli turkey</li>
+                                                <li>2 pieces of sourdough bread</li>
+                                                <li>Salt and pepper (to taste)</li>
+                                                <li>1 bottle of mayo</li>
+                                                <li>1 tomato</li>
+                                                <li>1 apple</li>
+                                                <li>1 lettuce</li>
+                                                <li>1 red onion</li>
+                                            </p>
+                                            <h4>Directions:</h4>
+                                            <p><strong>1. Toast the Bread:</strong>
+                                                Place the two slices of sourdough bread into the toaster on the setting
+                                                you desire
+                                                <br>
+                                                <strong>2. Build the Sandwich:</strong>
+                                                First spread the mayo onto the toasted bread. Next, add the turkey,
+                                                sliced tomato, sliced onion and sliced apple on top.
+                                                <br>
+                                                <strong>3. Serve:</strong>
+                                                Slice in half and enjoy!
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 card-text"><small class="text-body-secondary">Last updated February
+                                    2025</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='noodles.png')}}" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Buttered Noodles</h5>
+                            <p class="card-text">Perfect for a comfort meal and a cozy night in, these butter noodles
+                                with veggies can ease any mood</p>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop4">
+                                Read more
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal modal-xl fade" id="staticBackdrop4" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop4Label"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-7" id="staticBackdropLabel">Buttered Noodles</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4>Ingredients:</h4>
+                                            <p>
+                                                <li>1 pack of frozen veggies (peas, carrots, and corn)</li>
+                                                <li>1 box of fusili pasta (or preferred shape)</li>
+                                                <li>Salt and pepper (to taste)</li>
+                                                <li>1 stick of butter or dairy free butter alternative</li>
+                                                <li>1 cup of shrredded cheese or dairy free alternative</li>
+                                                <li>1 container of minced garlic</li>
+                                                <li>1/4 cup of water</li>
+                                            </p>
+                                            <h4>Directions:</h4>
+                                            <p><strong>1. Start the Pasta:</strong>
+                                                Boil a medium pot of water and pour the box pasta in once ready. Cook 9
+                                                minutes or until al dente.
+                                                <br>
+                                                <strong>2. Begin with the Veggies:</strong>
+                                                Pour frozen veggies into a medium sauce pan and steam with a 1/4 cup of
+                                                water
+                                                <br>
+                                                <strong>3. Sautee Veggies :</strong>
+                                                Once the water has evaporated and the veggies are no longer frozen, add
+                                                in butter, salt, pepper and minced garlic to the pan and sautee until
+                                                incoperated.
+                                                <br>
+                                                <strong>4. Mix:</strong>
+                                                Once the pasta is cooked, preserve 1/2 cup of pasta water and drain the
+                                                rest of water out. Place the pasta back into the pot and pour back in
+                                                the pasta water. Add in the veggie mixture and shrredded cheese.
+                                                <br>
+                                                <strong>5. Serve:</strong>
+                                                Mix throughly in the pot and serve into a bowl. Add extra cheese on top
+                                                for a cozy dinner!
+                                                <br>
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 card-text"><small class="text-body-secondary">Last updated February
+                                    2025</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

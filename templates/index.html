@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<div class="main" id="indexmain">
+    <div id="bg">
+        <div id="textcontainer">
+            <h1 class="hometext" class="text-center"><strong>Welcome to</strong></h1>
+            <h1 class="hometext" class="text-center"><strong>Grace's Kitchen</strong></h1>
+        </div>
+        <br>
+        <div id="">
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <div class="row">
+                <div class="col picblock">
+                    <img src="{{ url_for('static', filename='about.jpg')}}" class="img-thumbnail">
+                </div>
+                <div class="col textblock">
+                    <h1 class="textmain">About</h1>
+                    <p class="pblocktext">Learn more about Grace and send in recipes suggestions or any questions!</p>
+                    <button type="button" class="btn btn-secondary btn-lg ab"><a class="pagebuttons" href="{{ url_for('about') }}">To Page</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="row">
+                <div class="col textblock">
+                    <h1 class="textmain">Recipes</h1>
+                    <p class="pblocktext">View our favorite and most highly rated dishes and learn how to make them at home!</p>
+                    <button type="button" class="btn btn-secondary btn-lg ab"><a class="pagebuttons" href="{{ url_for('recipes') }}">To Page</a></button>
+                </div>
+                <div class="col picblock">
+                    <img src="{{ url_for('static', filename='recipes.jpeg')}}" class="img-thumbnail float-end">
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="row">
+                <div class="col picblock">
+                    <img src="{{ url_for('static', filename='blog.jpg')}}" class="img-thumbnail">
+                </div>
+                <div class="col textblock">
+                    <h1 class="textmain">Blog</h1>
+                    <p class="pblocktext">Connect with others via posts and messages and learn new cooking hacks and tricks</p>
+                    <button type="button" class="btn btn-secondary btn-lg ab"><a class="pagebuttons" href="{{ url_for('blog') }}">To Page</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
